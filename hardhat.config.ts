@@ -1,6 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import * as dotenv from "dotenv";
+import "nil-hardhat-plugin"
 
 dotenv.config();
 const config: HardhatUserConfig = {
