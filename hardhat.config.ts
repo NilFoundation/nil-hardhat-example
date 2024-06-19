@@ -6,6 +6,9 @@ import "nil-hardhat-plugin"
 dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
+  ignition: {
+    requiredConfirmations: 1,
+  },
   networks: {
     nil_cluster: {
       url: process.env.NIL_RPC_ENDPOINT,
