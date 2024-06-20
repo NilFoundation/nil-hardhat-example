@@ -4,7 +4,11 @@ import * as dotenv from "dotenv";
 import "nil-hardhat-plugin"
 
 dotenv.config();
-const config: HardhatUserConfig = {
+
+interface MyHardhatUserConfig extends HardhatUserConfig {
+  walletAddress?: string;
+}
+const config: MyHardhatUserConfig = {
   solidity: "0.8.24",
   ignition: {
     requiredConfirmations: 1,
@@ -12,9 +16,10 @@ const config: HardhatUserConfig = {
   networks: {
     nil_cluster: {
       url: process.env.NIL_RPC_ENDPOINT,
-      accounts: [process.env.PRIVATE_KEY]
+      accounts: [process.env.PRIVATE_KEY],
     }
-  }
+  },
+  walletAddress: process.env.WALLET_ADDR
 };
 
 export default config;
