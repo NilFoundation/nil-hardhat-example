@@ -1,18 +1,18 @@
 import { task } from "hardhat/config";
 
 task("increment", "Increments the counter")
-.addParam("contract", "The address of the SimpleStorage contract")
+.addParam("contract", "The address of the Incrementer contract")
 .setAction(async (taskArgs, hre) => {
 	// Get the contract
-	const SimpleStorage = await hre.ethers.getContractFactory("SimpleStorage");
-	const simpleStorage = SimpleStorage.attach(taskArgs.contract);
+	const Incrementer = await hre.ethers.getContractFactory("Incrementer");
+	const incrementer = Incrementer.attach(taskArgs.contract);
 
 	// Call the increment function
 	console.log("Incrementing value...");
-	const incrementTx = await simpleStorage.increment();
+	const incrementTx = await incrementer.increment();
 	await incrementTx.wait(0);
 
 	// Fetch the new value
-	const currentValue = await simpleStorage.getValue();
+	const currentValue = await incrementer.getValue();
 	console.log(`Current Value: ${currentValue}`);
 });
