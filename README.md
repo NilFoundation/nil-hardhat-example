@@ -48,3 +48,7 @@ npx hardhat increment --network nil_cluster --contract <Contract Address>
 
 ## 💪 Contributing
  Contributions are always welcome! Please feel free to submit pull requests or open issues to discuss potential changes or improvements.
+## 🚧 Work in Progress
+**Please Note:** This project is currently under active development. Not all features are fully implemented, and you may encounter issues. If something isn't working as expected, don't hesitate to open an issue on our GitHub repository. We prioritize addressing these concerns and will get back to you promptly. Your feedback helps us improve!
+
+Thank you for supporting our development efforts!
