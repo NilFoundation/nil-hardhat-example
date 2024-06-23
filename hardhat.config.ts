@@ -1,15 +1,14 @@
-import "@nomicfoundation/hardhat-ethers"
+import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-toolbox";
-import "hardhat-deploy"
+import "hardhat-deploy";
 import * as dotenv from "dotenv";
-import {NilHardhatUserConfig} from "nil-hardhat-plugin"
-import "nil-hardhat-plugin"
+import type { NilHardhatUserConfig } from "nil-hardhat-plugin";
+import "nil-hardhat-plugin";
 
 // Import tasks
 import "./tasks/increment";
 
 dotenv.config();
-
 
 const config: NilHardhatUserConfig = {
   solidity: "0.8.24",
@@ -22,6 +21,6 @@ const config: NilHardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
-  walletAddress: process.env.WALLET_ADDR
+  walletAddress: process.env.WALLET_ADDR,
 };
 export default config;

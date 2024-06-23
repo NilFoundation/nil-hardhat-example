@@ -1,31 +1,25 @@
 const { expect } = require("chai");
 const hre = require("hardhat");
 
-describe("Incrementer contract", function () {
-	let incrementer:any;
-	let accounts;
+describe("Incrementer contract", () => {
+  it("Should increment the value", async () => {
+    // Deploy the contract before each test
+    const incrementer = await hre.ethers.deployContract("Incrementer");
 
-	beforeEach(async function () {
-		// Deploy the contract before each test
-		 incrementer = await hre.ethers.deployContract("Incrementer");
+    const accounts = await hre.ethers.getSigners();
+    // Initial value should be 0
+    expect(await incrementer.getValue()).to.equal(0);
 
-		accounts = await hre.ethers.getSigners();
-	});
+    // Increment the value
+    await incrementer.increment();
 
-	it("Should increment the value", async function () {
-		// Initial value should be 0
-		expect(await incrementer.getValue()).to.equal(0);
+    // New value should be 1
+    expect(await incrementer.getValue()).to.equal(1);
 
-		// Increment the value
-		await incrementer.increment();
+    // Increment the value again
+    await incrementer.increment();
 
-		// New value should be 1
-		expect(await incrementer.getValue()).to.equal(1);
-
-		// Increment the value again
-		await incrementer.increment();
-
-		// New value should be 2
-		expect(await incrementer.getValue()).to.equal(2);
-	});
+    // New value should be 2
+    expect(await incrementer.getValue()).to.equal(2);
+  });
 });

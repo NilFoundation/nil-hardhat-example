@@ -3,9 +3,14 @@
   "scripts": {
     "test": "npx hardhat test --config hardhat.config.testing.ts",
     "compile": "npx hardhat compile",
-    "clean": "npx hardhat clean"
+    "clean": "npx hardhat clean",
+    "format": "biome format ./",
+    "lint": "biome check ./",
+    "fix:format": "biome format --write ./",
+    "fix:lint": "biome check --apply ./"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.2",
     "@nomicfoundation/hardhat-ethers": "^3.0.6",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "ethers": "^6.13.1",
