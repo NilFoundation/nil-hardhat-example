@@ -1,7 +1,5 @@
-// Import ethers from Hardhat package
 import { task } from "hardhat/config";
 
-// Task to increment the value
 task("increment", "Increments the counter")
 .addParam("contract", "The address of the SimpleStorage contract")
 .setAction(async (taskArgs, hre) => {
