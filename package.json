@@ -1,5 +1,10 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "test": "npx hardhat test --config hardhat.config.testing.ts",
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.6",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",

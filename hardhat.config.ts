@@ -7,7 +7,6 @@ import "nil-hardhat-plugin"
 
 // Import tasks
 import "./tasks/increment";
-import {HardhatRuntimeEnvironment} from "hardhat/types";
 
 dotenv.config();
 
@@ -21,7 +20,7 @@ const config: NilHardhatUserConfig = {
     nil_cluster: {
       url: process.env.NIL_RPC_ENDPOINT,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-    }
+    },
   },
   walletAddress: process.env.WALLET_ADDR
 };
