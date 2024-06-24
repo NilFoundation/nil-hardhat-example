@@ -1,6 +1,5 @@
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-toolbox";
-import "hardhat-deploy";
 import * as dotenv from "dotenv";
 import type { NilHardhatUserConfig } from "nil-hardhat-plugin";
 import "nil-hardhat-plugin";
