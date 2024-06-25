@@ -1,8 +1,8 @@
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-toolbox";
 import * as dotenv from "dotenv";
-import type { NilHardhatUserConfig } from "nil-hardhat-plugin";
-import "nil-hardhat-plugin";
+import type { NilHardhatUserConfig } from "@nilfoundation/hardhat-plugin";
+import "@nilfoundation/hardhat-plugin";
 
 // Import tasks
 import "./tasks/increment";
