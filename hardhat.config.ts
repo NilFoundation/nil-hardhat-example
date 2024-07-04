@@ -6,6 +6,8 @@ import "@nilfoundation/hardhat-plugin";
 
 // Import tasks
 import "./tasks/increment";
+import "./tasks/erc20transfer";
+import "./tasks/wallet";
 
 dotenv.config();
 
@@ -15,7 +17,7 @@ const config: NilHardhatUserConfig = {
     requiredConfirmations: 1,
   },
   networks: {
-    nil_cluster: {
+    nil: {
       url: process.env.NIL_RPC_ENDPOINT,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
