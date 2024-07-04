@@ -8,6 +8,8 @@ import "@nilfoundation/hardhat-plugin";
 import "./tasks/increment";
 import "./tasks/erc20transfer";
 import "./tasks/wallet";
+import "./tasks/contractInteraction";
+import "./tasks/airdrop";
 
 dotenv.config();
 

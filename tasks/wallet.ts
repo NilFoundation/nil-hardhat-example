@@ -1,5 +1,4 @@
 import {task} from "hardhat/config";
-import {ethers} from "ethers";
 import {
     generateRandomPrivateKey,
     HttpTransport,
