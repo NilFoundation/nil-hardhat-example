@@ -13,7 +13,7 @@ task("increment", "Increments the counter")
         await incrementTx.wait(0);
 
         // Fetch the new value
-        const currentValue = await incrementer.value();
+        const currentValue = await incrementer.getValue();
         console.log(`Current Value 2: ${currentValue}`);
 
         // Call the increment function
@@ -22,6 +22,6 @@ task("increment", "Increments the counter")
         await incrementTx2.wait(0);
 
         // Fetch the new value
-        const currentValue2 = await incrementer.value();
+        const currentValue2 = await incrementer.getValue();
         console.log(`Current Value 2: ${currentValue2}`);
     });
