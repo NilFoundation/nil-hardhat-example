@@ -6,6 +6,10 @@ import "@nilfoundation/hardhat-plugin";
 
 // Import tasks
 import "./tasks/increment";
+import "./tasks/erc20transfer";
+import "./tasks/wallet";
+import "./tasks/contractInteraction";
+import "./tasks/airdrop";
 
 dotenv.config();
 
@@ -21,5 +25,6 @@ const config: NilHardhatUserConfig = {
     },
   },
   walletAddress: process.env.WALLET_ADDR,
+  debug: true,
 };
 export default config;
