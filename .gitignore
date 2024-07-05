@@ -13,7 +13,7 @@ node_modules
 /typechain-types
 
 # solidity-coverage files
-/coverage
+/coverageÅ
 /coverage.json
 
 # Hardhat Ignition default folder for deployments against a local node

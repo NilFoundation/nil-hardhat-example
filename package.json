@@ -20,7 +20,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@nilfoundation/hardhat-plugin": "^0.1.4",
+    "@nilfoundation/hardhat-plugin": "^0.1.7",
     "dotenv": "^16.4.5"
   }
 }
