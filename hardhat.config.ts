@@ -15,7 +15,7 @@ const config: NilHardhatUserConfig = {
     requiredConfirmations: 1,
   },
   networks: {
-    nil_cluster: {
+    nil: {
       url: process.env.NIL_RPC_ENDPOINT,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
