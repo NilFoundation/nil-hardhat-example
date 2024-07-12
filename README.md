@@ -29,21 +29,25 @@ This repository demonstrates how to deploy and interact with smart contracts on 
    ```
 
 ## ⚙️ Configuration
-Create a `.env` file in the root directory and set the following parameters:
-```
-NIL_RPC_ENDPOINT=http://127.0.0.1:8529
-WALLET_ADDR=0x0001111111111111111111111111111111111111
-PRIVATE_KEY=3cac3b0d9297577dfac95fecdd751511446c074a039f001c04585d341423a82a
-```
+1. Create a `.env` file in the root directory based on the given `.env.example` file.
+2. Update the `.env` file with the RPC URL. The default value corresponds to a locally running =nil; node.
+3. Create private key and wallet using `nil_cli`:
+    ```
+    nil_cli keygen new
+    nil_cli wallet new
+    ```
+4. Update the `.env` file with the private key and wallet address.
+
+You can run `npm test` to check if the configuration is correct.
 
 ## 🎯 Usage
 To deploy and interact with the Incrementer contract, use the following commands:
 ```
 # Deploy the contract
-npx hardhat ignition deploy ./ignition/modules/Incrementer.ts --network nil_cluster
+npx hardhat ignition deploy ./ignition/modules/Incrementer.ts --network nil
 
 # Interact with the contract
-npx hardhat increment --network nil_cluster --contract <Contract Address>
+npx hardhat increment --network nil --contract <Contract Address>
 ```
 
 ## 💪 Contributing

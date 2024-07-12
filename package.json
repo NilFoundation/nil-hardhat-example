@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "test": "npx hardhat test --config hardhat.config.testing.ts",
+    "test": "npx hardhat test --network nil",
     "compile": "npx hardhat compile",
     "clean": "npx hardhat clean",
     "format": "biome format ./",
