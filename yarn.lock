@@ -26,10 +26,15 @@
     "@biomejs/cli-win32-arm64" "1.8.2"
     "@biomejs/cli-win32-x64" "1.8.2"
 
-"@biomejs/cli-darwin-arm64@1.8.2":
+"@biomejs/cli-linux-x64-musl@1.8.2":
   version "1.8.2"
-  resolved "https://registry.npmjs.org/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-1.8.2.tgz"
-  integrity sha512-l9msLsTcSIAPqMsPIhodQmb50sEfaXPLQ0YW4cdj6INmd8iaOh/V9NceQb2366vACTJgcWDQ2RzlvURek1T68g==
+  resolved "https://registry.npmjs.org/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-1.8.2.tgz"
+  integrity sha512-rk1Wj4d3LIlAlIAS1m2jlyfOjkNbuY1lfwKvWIAeZC51yDMzwhRD7cReE5PE+jqLDtq60PX38hDPeKd7nA1S6A==
+
+"@biomejs/cli-linux-x64@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmjs.org/@biomejs/cli-linux-x64/-/cli-linux-x64-1.8.2.tgz"
+  integrity sha512-bjhhUVFchFid2gOjrvBe4fg8BShcpyFQTHuB/QQnfGxs1ddrGP30yq3fHfc6S6MoCcz9Tjd3Zzq1EfWfyy5iHA==
 
 "@chainsafe/as-sha256@^0.4.2":
   version "0.4.2"
@@ -465,10 +470,10 @@
     tweetnacl "^1.0.3"
     tweetnacl-util "^0.15.1"
 
-"@nilfoundation/hardhat-plugin@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.npmjs.org/@nilfoundation/hardhat-plugin/-/hardhat-plugin-0.1.8.tgz"
-  integrity sha512-CqDs8tUB78oSd25+dNRDK9yL3/2laXnXlV6s/vl8rqJmd/Q5xgVfRhQriWLngRqRXEBRRpTGmgH7kl38sxhpJA==
+"@nilfoundation/hardhat-plugin@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.npmjs.org/@nilfoundation/hardhat-plugin/-/hardhat-plugin-0.1.9.tgz"
+  integrity sha512-mI5UZfHRIquAVzgFfw2iEvmt8l3EWkvnHCKGPQVdIdantFu6K5VXOgBWuLI6zAIzCg9cM+sarXtBB3atYE/w8A==
   dependencies:
     "@nilfoundation/niljs" "^0.9.0"
     ethers "^6.12.1"
@@ -719,8 +724,15 @@
   resolved "https://registry.npmjs.org/@nomicfoundation/ignition-ui/-/ignition-ui-0.15.4.tgz"
   integrity sha512-cHbmuxmhso5n2zdIaaIW4p8NNzrFj0mrnv8ufhAZfM3s3IFrRoGc1zo8hI/n1CiOTPuqUbdZcB79d+2tCKtCNw==
 
-"@nomicfoundation/solidity-analyzer-darwin-arm64@0.1.1":
+"@nomicfoundation/solidity-analyzer-linux-x64-gnu@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-gnu/-/solidity-analyzer-linux-x64-gnu-0.1.2.tgz"
+  integrity sha512-9dlHMAt5/2cpWyuJ9fQNOUXFB/vgSFORg1jpjX1Mh9hJ/MfZXlDdHQ+DpFCs32Zk5pxRBb07yGvSHk9/fezL+g==
+
+"@nomicfoundation/solidity-analyzer-linux-x64-gnu@0.1.1":
   version "0.1.1"
+  resolved "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-gnu/-/solidity-analyzer-linux-x64-gnu-0.1.1.tgz"
+  integrity sha512-5WN7leSr5fkUBBjE4f3wKENUy9HQStu7HmWqbtknfXkkil+eNWiBV275IOlpXku7v3uLsXTOKpnnGHJYI2qsdA==
 
 "@nomicfoundation/solidity-analyzer@^0.1.0", "@nomicfoundation/solidity-analyzer@^0.1.1":
   version "0.1.1"
@@ -2194,11 +2206,6 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
-
-fsevents@~2.3.2:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
-  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.2:
   version "1.1.2"
