@@ -1,25 +1,43 @@
-const { expect } = require("chai");
-const hre = require("hardhat");
+import hre from "hardhat";
+import {expect} from "chai";
+import * as assert from "node:assert";
 
 describe("Incrementer contract", () => {
-  it("Should increment the value", async () => {
-    // Deploy the contract before each test
-    const incrementer = await hre.ethers.deployContract("Incrementer");
+    it("Should increment the value", async () => {
+        const factory = await hre.ethers.getContractFactory("Incrementer");
+        console.log("factory", JSON.stringify(factory));
 
-    const accounts = await hre.ethers.getSigners();
-    // Initial value should be 0
-    expect(await incrementer.getValue()).to.equal(0);
+        const deployTx = await factory.getDeployTransaction();
+        console.log("deployTx", JSON.stringify(deployTx));
 
-    // Increment the value
-    await incrementer.increment();
+        assert.ok(factory.runner);
+        assert.ok(factory.runner.sendTransaction);
 
-    // New value should be 1
-    expect(await incrementer.getValue()).to.equal(1);
+        const sentTx = await factory.runner.sendTransaction(deployTx);
+        console.log("sentTx", JSON.stringify(sentTx));
 
-    // Increment the value again
-    await incrementer.increment();
+        const txResponse = await sentTx.wait();
+        console.log("txResponse", JSON.stringify(txResponse));
 
-    // New value should be 2
-    expect(await incrementer.getValue()).to.equal(2);
-  });
+        assert.ok(txResponse);
+        assert.ok(txResponse.contractAddress);
+
+        const incrementer = factory.attach(txResponse.contractAddress);
+        console.log("incrementer", JSON.stringify(incrementer));
+
+        // Initial value should be 0
+        expect(await incrementer.getValue()).to.equal(0);
+
+        // Increment the value
+        await incrementer.increment();
+
+        // New value should be 1
+        expect(await incrementer.getValue()).to.equal(1);
+
+        // Increment the value again
+        await incrementer.increment();
+
+        // New value should be 2
+        expect(await incrementer.getValue()).to.equal(2);
+    });
 });
