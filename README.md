@@ -50,6 +50,14 @@ npx hardhat ignition deploy ./ignition/modules/Incrementer.ts --network nil
 npx hardhat increment --network nil --contract <Contract Address>
 ```
 
+## 🎯 Testing
+To run a test for Incrementer contract, use the following commands:
+```
+# Deploy the contract
+npm run test
+```
+Make sure to configure .env with RPC and PRIVATE_KEY
+
 ## 💪 Contributing
  Contributions are always welcome! Please feel free to submit pull requests or open issues to discuss potential changes or improvements.
 

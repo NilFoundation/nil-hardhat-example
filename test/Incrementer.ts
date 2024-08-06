@@ -1,28 +1,28 @@
-import hre from "hardhat";
-import {expect} from "chai";
 import * as assert from "node:assert";
+import { expect } from "chai";
+import hre from "hardhat";
+import "@nomicfoundation/hardhat-ethers";
+
+async function deployNilContract(name: string, args: any[] = []) {
+    const factory = await hre.ethers.getContractFactory(name);
+    assert.ok(factory.runner);
+    assert.ok(factory.runner.sendTransaction);
+
+    const deployTx = await factory.getDeployTransaction(...args);
+
+    const sentTx = await factory.runner.sendTransaction(deployTx);
+    const txResponse = await sentTx.wait();
+
+    if (!txResponse || !txResponse.contractAddress) {
+        throw new Error("Contract deployment failed");
+    }
+
+    return factory.attach(txResponse.contractAddress);
+}
 
 describe("Incrementer contract", () => {
     it("Should increment the value", async () => {
-        const factory = await hre.ethers.getContractFactory("Incrementer");
-        console.log("factory", JSON.stringify(factory));
-
-        const deployTx = await factory.getDeployTransaction();
-        console.log("deployTx", JSON.stringify(deployTx));
-
-        assert.ok(factory.runner);
-        assert.ok(factory.runner.sendTransaction);
-
-        const sentTx = await factory.runner.sendTransaction(deployTx);
-        console.log("sentTx", JSON.stringify(sentTx));
-
-        const txResponse = await sentTx.wait();
-        console.log("txResponse", JSON.stringify(txResponse));
-
-        assert.ok(txResponse);
-        assert.ok(txResponse.contractAddress);
-
-        const incrementer = factory.attach(txResponse.contractAddress);
+        const incrementer = await deployNilContract("Incrementer");
         console.log("incrementer", JSON.stringify(incrementer));
 
         // Initial value should be 0
