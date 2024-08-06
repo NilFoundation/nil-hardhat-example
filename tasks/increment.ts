@@ -7,9 +7,6 @@ task("increment", "Increments the counter")
     const Incrementer = await hre.ethers.getContractFactory("Incrementer");
     const incrementer = Incrementer.attach(taskArgs.contract);
 
-    // Hardcoded value to send (0.01 Ether)
-
-
     // Call the increment function with value
     console.log("Incrementing value...");
     const incrementTx = await incrementer.increment();
