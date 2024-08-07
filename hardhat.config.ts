@@ -24,7 +24,7 @@ const config: NilHardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
-  walletAddress: process.env.WALLET_ADDR,
+  walletAddress: process.env.WALLET_ADDR?.toLowerCase(),
   debug: true,
 };
 export default config;
