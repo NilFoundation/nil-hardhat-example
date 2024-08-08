@@ -22,5 +22,6 @@ const config: NilHardhatUserConfig = {
   },
   walletAddress: process.env.WALLET_ADDR,
   debug: true,
+  feeCredit:10000000,
 };
 export default config;
