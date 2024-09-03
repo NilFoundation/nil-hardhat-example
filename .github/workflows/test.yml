@@ -26,4 +26,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
+        env:
+          NIL_RPC_ENDPOINT: ${{ secrets.NIL_RPC_ENDPOINT }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: npm run tests
