@@ -1,8 +1,8 @@
 import { task } from "hardhat/config";
 
 task("increment", "Increments the counter")
-.addParam("contract", "The address of the Incrementer contract")
-.setAction(async (taskArgs, hre) => {
+  .addParam("contract", "The address of the Incrementer contract")
+  .setAction(async (taskArgs, hre) => {
     // Get the contract
     const Incrementer = await hre.ethers.getContractFactory("Incrementer");
     const incrementer = Incrementer.attach(taskArgs.contract);
@@ -15,4 +15,4 @@ task("increment", "Increments the counter")
     // Fetch the new value
     const currentValue = await incrementer.getValue();
     console.log(`Current Value: ${currentValue}`);
-});
+  });
