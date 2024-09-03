@@ -9,7 +9,5 @@ updates:
       prefix: "deps"
     labels:
       - "dependencies"
-    ignore:
-      - dependency-name: "*" # Ignore all dependencies except the one below
     allow:
       - dependency-name: "@nilfoundation/hardhat-plugin"
