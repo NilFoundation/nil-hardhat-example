@@ -20,8 +20,8 @@ This repository demonstrates how to deploy and interact with smart contracts on 
 ## ⚙️ Configuration
 1. Create a `.env` file in the root directory based on the given `.env.example` file
 2. Update the `.env` file with the RPC URL. The default value corresponds to a locally running =nil; node
-3. If you don't have `nil_cli` installed, you can download it from the official repository here
-Once you have `nil_cli,` run the following commands to generate a new key and wallet:
+3. If you don't have `nil_cli` installed, you can download it from the official repository [here](https://github.com/NilFoundation/nil_cli).
+Once you have `nil_cli`, run the following commands to generate a new key and wallet:
     ```
     nil_cli keygen new
     nil_cli wallet new
