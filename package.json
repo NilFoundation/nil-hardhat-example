@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "test": "npx hardhat test --config hardhat.config.testing.ts",
+    "test": "npx hardhat test --network nil",
     "compile": "npx hardhat compile",
     "clean": "npx hardhat clean",
     "format": "biome format ./",
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.2",
+    "@nilfoundation/niljs": "^0.9.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.6",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "ethers": "^6.13.1",
@@ -19,7 +20,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@nilfoundation/hardhat-plugin": "^0.1.5",
+    "@nilfoundation/hardhat-plugin": "^0.12.2",
+    "@nomicfoundation/solidity-analyzer-linux-x64-gnu": "^0.1.2",
     "dotenv": "^16.4.5"
   }
 }
