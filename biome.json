@@ -17,6 +17,12 @@
     "lineWidth": 80
   },
   "files": {
-    "ignore": ["node_modules", "artifacts", "cache", "typechain-types"]
+    "ignore": [
+      "node_modules",
+      "artifacts",
+      "cache",
+      "typechain-types",
+      "ignition/deployments"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "test": "npx hardhat test --network nil",
+    "tests": "npx hardhat test --network nil",
     "compile": "npx hardhat compile",
     "clean": "npx hardhat clean",
     "format": "biome format ./",
@@ -20,7 +20,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@nilfoundation/hardhat-plugin": "^0.12.2",
+    "@nilfoundation/hardhat-plugin": "^0.13.0",
     "@nomicfoundation/solidity-analyzer-linux-x64-gnu": "^0.1.2",
     "dotenv": "^16.4.5"
   }

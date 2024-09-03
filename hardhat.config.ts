@@ -1,7 +1,7 @@
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-toolbox";
-import * as dotenv from "dotenv";
 import type { NilHardhatUserConfig } from "@nilfoundation/hardhat-plugin";
+import * as dotenv from "dotenv";
 import "@nilfoundation/hardhat-plugin";
 
 // Import tasks
