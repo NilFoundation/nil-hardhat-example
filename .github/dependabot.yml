@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencies"
+    ignore:
+      - dependency-name: "*" # Ignore all dependencies except the one below
+    allow:
+      - dependency-name: "@nilfoundation/hardhat-plugin"
