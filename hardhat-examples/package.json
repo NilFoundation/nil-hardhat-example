@@ -1,0 +1,21 @@
+{
+  "name": "hardhat-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tests": "npx hardhat test --network nil",
+    "lint": "biome check ignition/modules test",
+    "lint:fix": "biome check --write ignition/modules test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nilfoundation/hardhat-plugin": "^0.13.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.6",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2"
+  }
+}
