@@ -1,11 +1,14 @@
 {
-  "name": "hardhat-example",
+  "name": "nil-hardhat-template",
   "version": "1.0.1",
-  "main": "index.js",
   "scripts": {
+    "start": "node cli.js",
     "tests": "npx hardhat test --network nil",
     "lint": "biome check ignition/modules test",
     "lint:fix": "biome check --write ignition/modules test"
+  },
+  "bin": {
+    "create-nil-hardhat-template": "./cli.js"
   },
   "keywords": [],
   "author": "",
