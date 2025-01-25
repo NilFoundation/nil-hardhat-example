@@ -5,6 +5,7 @@ const path = require('path');
 const PATTERNS = {
     'access': 'AccessRestriction.sol',
     'state': 'StateMachine.sol',
+    'rate': 'RateLimiter.sol',
     'guard': 'GuardCheck.sol',
     'proxy': 'ProxyDelegate.sol',
     'check': 'CheckEffectsInteraction.sol'
