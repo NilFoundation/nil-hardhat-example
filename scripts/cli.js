@@ -51,9 +51,22 @@ function copyFile(srcFilePath, destFilePath) {
     }
 }
 
+function addPatternCommand() {
+    const packageJsonPath = path.join(projectPath, 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+
+    // Add create-pattern command to scripts
+    packageJson.scripts = packageJson.scripts || {};
+    packageJson.scripts['create-pattern'] = 'node scripts/create-pattern.js';
+
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+}
+
 createPackageJson(templatePath, projectPath);
 copyFile('.env.example', '.env');
 copyFile('ignition/modules/Incrementer.ts', 'ignition/modules/Incrementer.ts');
 copyFile('contracts/Incrementer.sol', 'contracts/Incrementer.sol');
+copyFile('scripts/create-pattern.js', 'scripts/create-pattern.js');
+addPatternCommand();
 
 console.log('Project setup complete!');
